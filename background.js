@@ -17,7 +17,7 @@ _config.default = {
 
 var host_list  = [];
 var host_proxy_list  = {};
-var curr_status;
+var curr_status   ;
 var current_host;
 var current_tab_id;
 var current_language;
