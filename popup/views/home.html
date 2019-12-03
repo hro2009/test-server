@@ -1,0 +1,100 @@
+<div class="vpn_autoWhite_box">
+    <div class="protectedHeader">
+        <h2 class="protectedHdng" ng-if="!ext_disabled" translate>NOTPROTECTED_HEADLINE_PROTECTED</h2>
+        <h2 class="not_protectedHdng" ng-if="ext_disabled" translate>NOTPROTECTED_HEADLINE_NOTPROTECTED</h2>
+    </div>
+    <div class="protected_midLogo">
+        <div class="protected_midLogo_img">
+            <img src="images/splash_logo_green.png" alt="#.">
+            <div class="protcted_centerIcon" ng-class=" ext_disabled ? 'disabled' : ''" ng-click="onOff()">
+            </div>
+            <div class="protcted_logoPos">
+                <div class="protcted_logoPos_innr">
+                    <p translate>NOTPROTECTED_HEADLINE_LOGOTEXT</p>
+                </div>
+            </div>
+            <div class="pprotcted_centerPos">
+                <div class="pprotcted_centerPos_innr">
+                    <p ng-if="!ext_disabled" translate>NOTPROTECTED_HEADLINE_DISABLE</p>
+                    <p ng-if="ext_disabled" translate>NOTPROTECTED_HEADLINE_ENABLE</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="protected_footer">
+        <div class="protected_footerInnr clearfix">
+            <div class="protected_footerField">
+                <span class="protected_footer_name">ResidentialVPN.io</span>
+                <div class="fieldError_out" ng-show="vpn_tooltip_error">
+                    <div class="fieldError_innr">
+                        <p>{{vpn_tooltip_error}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="protected_footerRight clearfix">
+                <ul class="protected_footerRightInnr">
+                    <li>
+                        <div class="protected_footSetingIcon">
+                            <a class="protected_footSetingBtn" href="#"><i class="fa fa-cog" aria-hidden="true"></i></a>
+                            <div class="protcted_fotSeting_toolTip">
+                                <div class="protcted_fotSeting_toolTipInn">
+                                    <ul>
+                                        <li ng-if="current_language === undefined">
+                                            <a class="prtctd_fotPop_slctLang" href="#" translate>OPTIONS_TEXT_SELLANG</a>
+                                        </li>
+                                        <li ng-if="current_language !== undefined">
+                                            <a class="prtctd_fotPop_slctLang" href="#">{{current_language.name}}</a>
+                                        </li>
+                                        <li>
+                                            <a class="prtctd_fotPop_sgetHlp" href="#" translate>OPTIONS_TEXT_GETHELP</a>
+                                        </li>
+                                        <li>
+                                            <a class="prtctd_fotPop_slogOut" href="#" ng-click="logout()" translate>TEXT_LOGOUT</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li ng-show="!ext_disabled">
+                        <div class="protected_footLengIcon" ng-show="country_flag">
+                            <a href="#" class="country-select">
+                                <img class="country-curr-flag" src="" alt="#">
+                            </a>
+                            <div class="protcted_fotLeng_topltip">
+                                <div class="protcted_fotLeng_topltipInn">
+                                    <p translate>NOTPROTECTED_SELECT_LOCATION_TOOLTIP</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="protected_footGlobalIcon" ng-if="!country_flag">
+                            <a href="#" class="country-select country_globe" >
+                                <i class="fa fa-globe" aria-hidden="true"></i>
+                            </a>
+                            <div class="protcted_fotLeng_topltip">
+                                <div class="protcted_fotLeng_topltipInn">
+                                    <p translate>NOTPROTECTED_SELECT_LOCATION_TOOLTIP</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="protected_footLengIcon wavesEffects" ng-click="goVpn()">
+                            <div class="notify">
+                                <span class="heartbit"></span> <span class="point"></span>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Select Country Popup -->
+    <div country-popup></div>
+    <!-- End Country Popup -->
+    <!-- Select Language Popup -->
+    <div language-popup></div>
+    <!-- End Language Popup -->
+</div>

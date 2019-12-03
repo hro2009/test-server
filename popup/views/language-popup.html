@@ -1,0 +1,14 @@
+<div class="slctLeng_popOut lenguage_select_popOpen ">
+    <div class="slctLeng_popSrch_field">
+        <input  class="selectpicker flagHolder" placeholder="{{ 'SELECT_LANGUAGE_PLACEHOLDER' | translate }}" type="text" id="languages-flags" autocomplete="on">
+        <ul class="languageText open_popup_list">
+                <li  ng-repeat="lang in languages" ng-click="changeLang(lang)">
+                    <a href="#">
+                    <div class="eac-item">
+                        <span class="flag  flag-{{lang.code | lowercase}}"  ng-style="{'background-image':'url(../../flags/32/{{lang.code | lowercase}}.png)'}"></span>{{lang.name}}
+                    </div>
+                    </a>
+                </li>
+        </ul>
+    </div>
+</div>

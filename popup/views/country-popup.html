@@ -1,0 +1,14 @@
+<div class="slctLeng_popOut country_select_popOpen">
+    <div class="slctLeng_popSrch_field">
+        <input placeholder="{{ 'SELECT_COUNTRY_PLACEHOLDER' | translate }}" type="text" id="countries-flags" class="focus">
+        <ul class="manuallFlags open_popup_list">
+            <li ng-repeat="country in countries" ng-click="changeCountry(country)">
+                <a href="#">
+                    <div class="eac-item">
+                        <span class="flag  flag-{{country.code | lowercase}}" ng-style="{'background-image':'url(../../flags/32/{{country.code | lowercase}}.png)'}"></span>{{country.name}}
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

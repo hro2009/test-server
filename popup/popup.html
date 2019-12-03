@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<title>Residential VPS</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/easy-autocomplete.min.css" rel="stylesheet">
+<link href="css/angular-growl.css" rel="stylesheet">
+<link href="css/popup.css" rel="stylesheet">
+<link href="css/flags.css" rel="stylesheet">
+<script type="text/javascript" src="../external/jquery.min.js"></script>
+<script type="text/javascript" src="../external/jquery.easy-autocomplete.min.js"></script>
+<script type="text/javascript" src="../external/angular.min.js"></script>
+<script type="text/javascript" src="../external/angular-route.min.js"></script>
+<script type="text/javascript" src="../external/angular-messages.min.js"></script>
+<script type="text/javascript" src="../external/angular-animate.min.js"></script>
+<script type="text/javascript" src="../external/angular-growl.min.js"></script>
+<script type="text/javascript" src="../external/angular-sanitize.min.js"></script>
+<script type="text/javascript" src="../external/angular-translate.min.js"></script>
+
+<script type="text/javascript" src="js/languages.js"></script>
+<script type="text/javascript" src="js/countries.js"></script>
+<script type="text/javascript" src="js/translations.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<script type="text/javascript" src="popup.js"></script>
+<script type="text/javascript" src="directives/country-popup.js"></script>
+<script type="text/javascript" src="directives/language-popup.js"></script>
+	<body ng-app="basicApp" ng-controller="globalCtrl">
+		<div class="wrapper">
+		 <div class="loaderOut" id="loader"><div class="loader" ><span style="display:block;width:200px; margin-left:-65px;" translate>TEXT_LOADING</span><svg class="lds-curve-bars" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid"><g transform="translate(50,50)"><circle><animateTransform attributeName="transform" type="rotate" values="0 0 0;360 0 0" times="0;1" dur="2s" calcMode="spline" keySplines="0.2 0 0.8 1" begin="-0.2" repeatCount="indefinite"></animateTransform></circle><circle><animateTransform attributeName="transform" type="rotate" values="0 0 0;360 0 0" times="0;1" dur="2s" calcMode="spline" keySplines="0.2 0 0.8 1" begin="-0.4" repeatCount="indefinite"></animateTransform></circle><circle><animateTransform attributeName="transform" type="rotate" values="0 0 0;360 0 0" times="0;1" dur="2s" calcMode="spline" keySplines="0.2 0 0.8 1" begin="-0.6" repeatCount="indefinite"></animateTransform></circle><circle><animateTransform attributeName="transform" type="rotate" values="0 0 0;360 0 0" times="0;1" dur="2s" calcMode="spline" keySplines="0.2 0 0.8 1" begin="-0.8" repeatCount="indefinite"></animateTransform></circle></g></svg></div></div>
+			<div growl></div>
+			<div class="vpn_auto">
+				<div ng-view></div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,89 @@
+<div class="vpn_autoWhite_box">
+    <div class="loginHeader clearfix">
+        <div class="loginHeaderlogo">
+            <span><img src="images/logo@2x.png" alt="No-Img"></span>
+        </div>
+        <div class="logoText">
+            <h2 style="" translate>LOGIN_TEXT_UPPERCASE</h2>
+        </div>
+    </div>
+    <div class="protectedloginText">
+        <p style=""> {{ 'LOGIN_HEADLINE_TEXT_TOP' | translate }} <br> {{ 'LOGIN_HEADLINE_TEXT_BOTTOM' | translate }} </p>
+    </div>
+
+
+    <form name="signInForm" ng-submit="signIn(signInForm.$valid)"  novalidate>
+        <div class="loginFormMain">
+            <div class="emailinputInner">
+                <input  type="email"  name="email" placeholder="{{ 'EMAIL_ADDRESS_PLACEHOLDER' | translate }}" ng-model="user.email" required>
+                <div ng-messages="signInForm.email.$touched && signInForm.email.$error" >
+                    <div ng-messages-include="views/messages.html"></div>
+                </div>
+            </div>
+            <div class="emailinputInner pw">
+                <input type="password"   name="password" placeholder="{{ 'PASSWORD_PLACEHOLDER' | translate }}" ng-model="user.password" required>
+                <div ng-messages="signInForm.password.$touched && signInForm.password.$error" >
+                    <div ng-messages-include="views/messages.html"></div>
+                </div>
+            </div>
+        </div>
+        <div class="loginbtnsMain">
+            <div class="innerLoginBtn">
+                <button type="submit" translate><i class="fa fa-sign-in" aria-hidden="true"></i>LOGIN_TEXT_UPPERCASE</button>
+                <p >- {{ 'LOGIN_TEXT_OR' | translate }} -</p>
+            </div>
+        </div>
+        <div class="socialIconMain">
+            <ul class="socialIconInner">
+                <li translate>{{ 'LOGIN_TEXT_LOGINUSING' | translate }}:</li>
+                <li><a href="#"  ng-click="fbSignIn()" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="#"  ng-click="twSignIn()" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="#"  ng-click="ggSignIn()" class="twitter"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+    </form>
+
+
+    <div class="createAccMain clearfix">
+        <div class="createAccText">
+            <p translate>LOGIN_TEXT_DONOTHAVEACCOUNT</p>
+        </div>
+        <div class="createAccBtn">
+            <a class="" href="#!signup" translate><i class="fa fa-user" aria-hidden="true"></i>LOGIN_TEXT_CREATEACCOUNT</a>
+        </div>
+    </div>
+    <div class="protected_footer">
+        <div class="protected_footerInnr clearfix">
+            <div class="protected_footerField">
+                <span class="protected_footer_name">ResidentialVPN.io</span>
+            </div>
+            <div class="protected_footerRight clearfix">
+                <ul class="protected_footerRightInnr">
+                    <li>
+                        <div class="protected_footSetingIcon">
+                            <a class="protected_footSetingBtn" href="#"><i class="fa fa-cog" aria-hidden="true"></i></a>
+                            <div class="protcted_fotSeting_toolTip">
+                                <div class="protcted_fotSeting_toolTipInn">
+                                    <ul>
+                                        <li ng-if="current_language === undefined">
+                                            <a class="prtctd_fotPop_slctLang" href="#" translate>OPTIONS_TEXT_SELLANG</a>
+                                        </li>
+                                        <li ng-if="current_language !== undefined">
+                                            <a class="prtctd_fotPop_slctLang" href="#">{{current_language.name}}</a>
+                                        </li>
+                                        <li>
+                                            <a class="prtctd_fotPop_sgetHlp" href="#" translate>OPTIONS_TEXT_GETHELP</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Select Language Popup -->
+    <div language-popup></div>
+    <!-- End Language Popup -->
+</div>

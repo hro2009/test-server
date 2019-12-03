@@ -1,0 +1,19 @@
+<nav>
+    <span>Hi {{userdata.name}}</span>
+    <span class="text-danger pull-right" ng-click="logout()">Logout</span>
+</nav>
+
+<div id="available-content">
+    <header>
+        <div class="logo-image"></div>
+    </header>
+    <ul id="menu">
+        <li class="menu-item" >
+            <button class="btn btn-info" id="changeProxy" ng-click="changeProxy()">Checking...</button>
+        </li>
+        <li class="menu-item" >
+            <button class="btn btn-default" ng-click="apiCall()">Api Call</button>
+        </li>
+    </ul>
+
+</div>
